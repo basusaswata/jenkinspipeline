@@ -29,7 +29,7 @@
                 }
                 stage ('Deploy') {
                     bat "echo 'deploying to server ${config.serverDomain}...'"
-					bat "echo y | pscp -i \"C:/saswata/tutorial/aws/accounts/sas-ec2.ppk\" \"C:\saswata\project zip\spring-boot-aws-master\spring-boot-aws-master\target\aa.txt\" ec2-user@54.236.31.129:/home/ec2-user"
+					bat "echo y | pscp -i \"C:/saswata/tutorial/aws/accounts/sas-ec2.ppk\" \"C:/saswata/project zip/spring-boot-aws-master/spring-boot-aws-master/target/aa.txt\" ec2-user@54.236.31.129:/home/ec2-user"
                 }
             } catch (err) {
                 currentBuild.result = 'FAILED'
