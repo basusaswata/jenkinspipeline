@@ -15,7 +15,8 @@
                     checkout scm
                 }
                 stage ('Build') {
-                    bat "echo 'building ${config.projectName} ...'"
+                    bat "echo '############ building ${config.projectName} ...'"
+			bat "mvn clear install"
                 }
                 stage ('Tests') {
                     parallel 'static': {
