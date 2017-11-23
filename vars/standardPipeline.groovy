@@ -16,7 +16,7 @@
                 }
                 stage ('Build') {
                     bat "echo '############ building ${config.projectName} ...'"
-			bat "mvn clear install"
+			bat "mvn clean install"
                 }
                 stage ('Tests') {
                     parallel 'static': {
