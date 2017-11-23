@@ -11,6 +11,7 @@
 
             try {
                 stage ('Clone') {
+		    bat "echo '#######checking out from git...'"
                     checkout scm
                 }
                 stage ('Build') {
