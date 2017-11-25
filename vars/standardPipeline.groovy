@@ -31,10 +31,10 @@
                     }
                 }
                 stage ('Deploy') {
-                    bat "echo 'deploying to server ${config.sbServer1}...'"
-					bat "echo y | pscp -i \"${config.keyFile}\" \"${config.artifactDir}\" ec2-user@${config.sbServer1}:/home/ec2-user"
-					bat "echo 'deploying to server ${config.sbServer2}...'"
-					bat "echo y | pscp -i \"${config.keyFile}\" \"${config.artifactDir}\" ec2-user@${config.sbServer2}:/home/ec2-user"
+                    bat "echo 'deploying to server ${sbServer1}...'"
+					bat "echo y | pscp -i \"${config.keyFile}\" \"${config.artifactDir}\" ec2-user@${sbServer1}:/home/ec2-user"
+					bat "echo 'deploying to server ${sbServer2}...'"
+					bat "echo y | pscp -i \"${config.keyFile}\" \"${config.artifactDir}\" ec2-user@${sbServer2}:/home/ec2-user"
                 }
             } catch (err) {
                 currentBuild.result = 'FAILED'
