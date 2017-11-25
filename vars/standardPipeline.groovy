@@ -21,6 +21,7 @@
                 stage ('Tests') {
                     parallel 'static': {
                         bat "echo 'shell scripts to run static tests...'"
+			    bat "mvn test"
                     },
                     'unit': {
                         bat "echo 'shell scripts to run unit tests...'"
